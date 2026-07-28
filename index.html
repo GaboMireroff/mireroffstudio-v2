@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Pages e Portfólios que Convertem — Mireroff.Studio</title>
+<meta name="description" content="Landing pages e portfólios pensados pra vender, não só pra existir. Atendimento presencial em Balsas-MA e remoto pra todo o Brasil. Peça seu diagnóstico grátis.">
+<link rel="canonical" href="https://mireroffstudio.com.br/">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" data-swap href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+<style>
+:root {
+  --branco: #ffffff;
+  --azul-marinho: #0b1e3a;
+  --azul-marinho-deep: #06142a;
+  --grafite: #2e3338;
+  --grafite-suave: #4c545c;
+  --terracota: #b14f30;
+  --terracota-hover: #93401f;
+  --terracota-on-dark: #e8916d;
+  --borda: #e6e8ec;
+
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  color: var(--grafite);
+  background: var(--branco);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 0;
+}
+
+a { text-decoration: none; color: inherit; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--terracota); outline-offset: 3px; }
+img { max-width: 100%; display: block; }
+
+/* Navbar */
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 22px 6%;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
+}
+.brand { display: flex; align-items: center; }
+.brand-logo { height: 60px; width: auto; }
+.nav-links { display: flex; align-items: center; gap: 32px; }
+.nav-links a { font-size: 0.92rem; font-weight: 500; color: var(--grafite); transition: opacity 0.2s ease; opacity: 0.85; }
+.nav-links a:hover { opacity: 1; }
+.nav-cta { background: var(--terracota); color: var(--branco) !important; padding: 9px 20px; border-radius: 6px; opacity: 1 !important; }
+.nav-cta:hover { background: var(--terracota-hover); }
+
+/* Hero */
+.hero {
+  position: relative; min-height: 92vh; display: flex; align-items: center; overflow: hidden;
+  background: linear-gradient(120deg, var(--azul-marinho-deep) 0%, var(--azul-marinho) 45%, #142d52 75%, var(--azul-marinho-deep) 100%);
+}
+.hero-glow { position: absolute; border-radius: 50%; filter: blur(80px); z-index: 0; pointer-events: none; will-change: transform; }
+.hero-glow-1 { width: 560px; height: 560px; background: radial-gradient(circle, rgba(201, 96, 63, 0.55) 0%, rgba(201, 96, 63, 0) 70%); top: -10%; right: -8%; animation: glowPulse 8s ease-in-out infinite; }
+.hero-glow-2 { width: 420px; height: 420px; background: radial-gradient(circle, rgba(201, 96, 63, 0.35) 0%, rgba(201, 96, 63, 0) 70%); bottom: -15%; left: -6%; animation: glowPulse 10s ease-in-out infinite reverse; }
+@keyframes glowPulse { 0%, 100% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.35); opacity: 1; } }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(6, 20, 42, 0.55) 0%, rgba(11, 30, 58, 0.35) 55%, rgba(11, 30, 58, 0.2) 100%); z-index: 1; }
+.hero-content { position: relative; z-index: 2; max-width: 760px; padding: 100px 6% 40px; }
+.hero-eyebrow { color: var(--terracota-on-dark); font-size: 0.8rem; font-weight: 600; letter-spacing: 2px; margin-bottom: 18px; }
+.hero-title { font-family: var(--serif); font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 600; color: var(--branco); line-height: 1.18; margin-bottom: 22px; text-wrap: balance; }
+.hero-title span { color: var(--terracota); font-style: italic; }
+.hero-sub { font-size: 1.1rem; color: rgba(255, 255, 255, 0.82); max-width: 560px; margin-bottom: 36px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 16px; }
+
+.btn { display: inline-block; padding: 14px 28px; border-radius: 6px; font-weight: 600; font-size: 0.95rem; transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease; }
+.btn-primary { background: var(--terracota); color: var(--branco); box-shadow: 0 8px 24px rgba(201, 96, 63, 0.35); }
+.btn-primary:hover { background: var(--terracota-hover); transform: translateY(-2px); }
+.btn-ghost { background: transparent; color: var(--branco); border: 1.5px solid rgba(255, 255, 255, 0.4); }
+.btn-ghost:hover { border-color: var(--branco); background: rgba(255, 255, 255, 0.08); }
+.btn-large { padding: 18px 38px; font-size: 1.05rem; }
+
+.scroll-cue { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); color: rgba(255, 255, 255, 0.6); font-size: 1.4rem; z-index: 2; animation: bounce 2s infinite; }
+@keyframes bounce { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 8px); } }
+
+/* Section shared */
+section { padding: 100px 6%; }
+.section-head { text-align: center; max-width: 640px; margin: 0 auto 48px; }
+.section-eyebrow { color: var(--terracota); font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; margin-bottom: 14px; }
+.section-head h2 { font-family: var(--serif); font-size: clamp(1.8rem, 3.2vw, 2.5rem); color: var(--azul-marinho); font-weight: 600; text-wrap: balance; }
+
+/* Services */
+.services { background: var(--branco); }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; max-width: 1100px; margin: 0 auto; }
+.services-grid.two-col { grid-template-columns: repeat(2, 1fr); max-width: 760px; }
+.service-card { padding: 36px 28px; border: 1px solid var(--borda); border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
+.service-card:hover { transform: translateY(-6px); box-shadow: 0 16px 32px rgba(11, 30, 58, 0.08); border-color: transparent; }
+.service-number { font-family: var(--serif); font-size: 1.6rem; color: var(--terracota); font-style: italic; }
+.service-card h3 { font-size: 1.25rem; color: var(--azul-marinho); margin: 14px 0 10px; }
+.service-card p { color: var(--grafite-suave); font-size: 0.96rem; }
+
+/* Método */
+.method-text { max-width: 680px; margin: -20px auto 56px; text-align: center; color: var(--grafite-suave); font-size: 1.02rem; }
+.process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: 1000px; margin: 0 auto; text-align: center; }
+.process-step h3 { color: var(--azul-marinho); font-size: 1.15rem; margin: 14px 0 8px; }
+.process-step p { color: var(--grafite-suave); font-size: 0.94rem; }
+
+/* Investimento */
+.portfolio { background: #f7f8fa; }
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 1080px; margin: 0 auto; align-items: start; }
+.price-card { background: var(--branco); border: 1px solid var(--borda); border-radius: 14px; padding: 32px; text-align: center; box-shadow: 0 8px 28px rgba(11, 30, 58, 0.07); position: relative; transition: transform 0.25s ease; }
+.price-card--highlight { border: 2px solid var(--terracota); transform: translateY(-10px); box-shadow: 0 16px 40px rgba(201, 96, 63, 0.18); }
+.price-badge {
+  position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+  background: var(--terracota); color: var(--branco); font-size: 0.76rem; font-weight: 700;
+  letter-spacing: 0.04em; text-transform: uppercase; padding: 6px 16px; border-radius: 999px; white-space: nowrap;
+}
+.price-name { font-size: 1.1rem; color: var(--azul-marinho); margin-bottom: 10px; }
+.price-value { font-family: var(--serif); font-size: 2rem; color: var(--azul-marinho); font-weight: 600; margin-bottom: 14px; }
+.price-note { font-size: 0.88rem; color: var(--grafite-suave); margin-bottom: 18px; }
+.price-list { list-style: none; margin: 0 0 20px; text-align: left; }
+.price-list li { display: flex; justify-content: space-between; gap: 10px; padding: 9px 0; border-top: 1px solid var(--borda); font-size: 0.9rem; }
+.price-list li:first-child { border-top: none; }
+.price-list li span:last-child { color: var(--grafite-suave); text-align: right; }
+.price-addon { font-size: 0.85rem; color: var(--terracota); font-weight: 600; margin-bottom: 18px; }
+.btn-ghost-dark { background: transparent; color: var(--azul-marinho); border: 1.5px solid var(--borda); }
+.btn-ghost-dark:hover { border-color: var(--azul-marinho); background: rgba(11, 30, 58, 0.04); }
+
+/* FAQ */
+.faq-list { max-width: 720px; margin: 0 auto; }
+.faq-item { border-top: 1px solid var(--borda); padding: 20px 0; }
+.faq-item:first-child { border-top: none; }
+.faq-item summary { font-family: var(--sans); font-weight: 600; color: var(--azul-marinho); cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; color: var(--terracota); flex: none; }
+.faq-item[open] summary::after { content: "–"; }
+.faq-item p { margin-top: 12px; color: var(--grafite-suave); font-size: 0.95rem; }
+
+/* CTA */
+.cta { background: linear-gradient(135deg, var(--azul-marinho) 0%, var(--azul-marinho-deep) 100%); text-align: center; padding: 120px 6%; }
+.cta h2 { font-family: var(--serif); color: var(--branco); font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin-bottom: 16px; font-weight: 600; text-wrap: balance; }
+.cta p { color: rgba(255, 255, 255, 0.78); margin-bottom: 32px; font-size: 1.05rem; }
+
+/* Footer */
+.footer { background: var(--azul-marinho-deep); color: rgba(255, 255, 255, 0.6); text-align: center; padding: 40px 6% 110px; }
+.footer-brand { margin-bottom: 14px; display: flex; justify-content: center; }
+.footer-brand .footer-logo { height: 48px; }
+.footer p { font-size: 0.85rem; margin-top: 4px; }
+
+/* Sticky CTA (mobile) */
+.sticky-cta { display: none; }
+
+/* Responsive */
+@media (max-width: 860px) {
+  .nav-links { gap: 18px; }
+  .nav-links a:not(.nav-cta) { display: none; }
+  .services-grid, .process-grid, .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
+  section { padding: 72px 6%; }
+  .method-text { margin-top: 0; }
+  .price-card--highlight { transform: none; }
+
+  .sticky-cta {
+    display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+    background: var(--branco); border-top: 1px solid var(--borda); padding: 12px 16px;
+    box-shadow: 0 -4px 16px rgba(11, 30, 58, 0.08);
+  }
+  .sticky-cta a {
+    width: 100%; text-align: center; background: var(--terracota); color: var(--branco);
+    font-weight: 600; padding: 13px; border-radius: 6px;
+  }
+  .footer { padding-bottom: 110px; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Mireroff.Studio",
+      "url": "https://mireroffstudio.com.br/",
+      "telephone": "+5599981008588",
+      "address": { "@type": "PostalAddress", "addressLocality": "Balsas", "addressRegion": "MA", "addressCountry": "BR" },
+      "areaServed": ["Balsas e região", "Brasil (atendimento remoto)"]
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Portfólio online",
+      "provider": { "@type": "LocalBusiness", "name": "Mireroff.Studio" },
+      "areaServed": ["Balsas e região", "Brasil (atendimento remoto)"]
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Página de vendas para tráfego pago",
+      "provider": { "@type": "LocalBusiness", "name": "Mireroff.Studio" },
+      "areaServed": ["Balsas e região", "Brasil (atendimento remoto)"]
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Página otimizada para SEO (Google)",
+      "provider": { "@type": "LocalBusiness", "name": "Mireroff.Studio" },
+      "areaServed": ["Balsas e região", "Brasil (atendimento remoto)"]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Vocês atendem só Balsas ou todo o Brasil?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Os dois: atendimento presencial em Balsas e região, e remoto por videochamada e WhatsApp pra qualquer cidade do Brasil." }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a diferença entre a página de tráfego pago e a página pra Google?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A de tráfego pago é feita pra converter quem já chega por anúncio — a copy é o foco. A de Google inclui pesquisa de palavra-chave e SEO técnico completo, pensada pra ser encontrada organicamente com o tempo." }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto tempo demora pra ficar pronto?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Em até 5 dias úteis após o diagnóstico da sua oferta ser aprovado com você." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="navbar">
+  <a href="#hero" class="brand">
+    <picture>
+      <source srcset="assets/logo.webp" type="image/webp">
+      <img src="assets/logo.png" alt="Mireroff.Studio" class="brand-logo" width="480" height="200">
+    </picture>
+  </a>
+  <nav class="nav-links">
+    <a href="#servicos">Serviços</a>
+    <a href="#metodo">Método</a>
+    <a href="#investimento">Investimento</a>
+    <a href="#faq">Perguntas</a>
+    <a href="#contato" class="nav-cta">Falar agora</a>
+  </nav>
+</header>
+
+<main>
+
+  <section id="hero" class="hero">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">MIREROFF.STUDIO · LANDING PAGES E PORTFÓLIOS</p>
+      <h1 class="hero-title">Seu site tem <span>3 segundos</span><br>pra prender o cliente.</h1>
+      <p class="hero-sub">A gente garante que ele não escapa. Landing pages e portfólios construídos pra converter — com diagnóstico antes de escrever, não template genérico. Atendimento presencial em Balsas-MA e remoto pra todo o Brasil.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/5599981008588?text=Oi!%20Quero%20o%20diagn%C3%B3stico%20da%20minha%20p%C3%A1gina" class="btn btn-primary" target="_blank" rel="noopener">Pedir diagnóstico grátis</a>
+        <a href="#servicos" class="btn btn-ghost">Ver serviços</a>
+      </div>
+    </div>
+    <a href="#servicos" class="scroll-cue" aria-label="Rolar para baixo">↓</a>
+  </section>
+
+  <section id="servicos" class="services">
+    <div class="section-head">
+      <p class="section-eyebrow">O QUE FAZEMOS</p>
+      <h2>Três coisas, feitas bem feitas</h2>
+    </div>
+    <div class="services-grid">
+      <article class="service-card">
+        <span class="service-number">01</span>
+        <h3>Portfólio</h3>
+        <p>Pra profissionais e criadores que precisam mostrar trabalho com impacto visual imediato.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-number">02</span>
+        <h3>Página pra tráfego pago</h3>
+        <p>Copy sob medida pro seu nicho, focada numa única ação: converter visitante em cliente.</p>
+      </article>
+      <article class="service-card">
+        <span class="service-number">03</span>
+        <h3>Página pra Google</h3>
+        <p>Otimizada pra aparecer na busca — palavra-chave, estrutura técnica e dados que o Google usa pra indexar.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="metodo">
+    <div class="section-head">
+      <p class="section-eyebrow">O MÉTODO</p>
+      <h2>Diagnóstico antes de escrever qualquer linha</h2>
+    </div>
+    <p class="method-text">Antes de montar sua página, analisamos sua oferta, seu público e o quanto o seu mercado já está saturado — porque a mesma frase que vende bem num nicho vende mal em outro. A página só é escrita depois desse diagnóstico, nunca antes.</p>
+    <div class="process-grid">
+      <div class="process-step">
+        <span class="service-number">01</span>
+        <h3>Conversa rápida</h3>
+        <p>Entendemos seu negócio, objetivo e prazo pelo WhatsApp.</p>
+      </div>
+      <div class="process-step">
+        <span class="service-number">02</span>
+        <h3>Diagnóstico e copy</h3>
+        <p>Definimos a promessa certa e escrevemos com base nisso — não em gosto pessoal.</p>
+      </div>
+      <div class="process-step">
+        <span class="service-number">03</span>
+        <h3>Site no ar</h3>
+        <p>Publicamos, testamos em todos os dispositivos e entregamos com domínio incluso.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="investimento" class="portfolio">
+    <div class="section-head">
+      <p class="section-eyebrow">O INVESTIMENTO</p>
+      <h2>Sem letra miúda</h2>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3 class="price-name">Portfólio</h3>
+        <p class="price-value">R$ 300</p>
+        <ul class="price-list">
+          <li><span>Domínio</span><span>Já configurado</span></li>
+          <li><span>Ajustes</span><span>2 incluídos</span></li>
+          <li><span>Entrega</span><span>Até 5 dias úteis</span></li>
+        </ul>
+        <a href="https://wa.me/5599981008588?text=Oi!%20Quero%20meu%20portf%C3%B3lio" class="btn btn-ghost-dark" target="_blank" rel="noopener">Quero meu portfólio</a>
+      </div>
+
+      <div class="price-card price-card--highlight">
+        <span class="price-badge">Mais escolhida</span>
+        <h3 class="price-name">Página pra tráfego pago</h3>
+        <p class="price-value">R$ 332</p>
+        <p class="price-note">Copy sob medida pro seu nicho — pensada pra reduzir em até 3x o custo por contato comparado a uma página genérica.</p>
+        <ul class="price-list">
+          <li><span>Domínio</span><span>Incluso</span></li>
+          <li><span>Copy sob medida</span><span>Incluída</span></li>
+          <li><span>Ajustes</span><span>3 incluídos</span></li>
+        </ul>
+        <a href="https://wa.me/5599981008588?text=Oi!%20Quero%20minha%20p%C3%A1gina%20pra%20tr%C3%A1fego%20pago" class="btn btn-primary" target="_blank" rel="noopener">Quero minha página</a>
+      </div>
+
+      <div class="price-card">
+        <h3 class="price-name">Página pra Google</h3>
+        <p class="price-value">R$ 467</p>
+        <p class="price-note">Otimizada com palavra-chave e estrutura técnica — feita pra ser encontrada. Clientes podem te achar em até 3x mais rápido.</p>
+        <ul class="price-list">
+          <li><span>Pesquisa de palavra-chave</span><span>Incluída</span></li>
+          <li><span>SEO técnico completo</span><span>Incluído</span></li>
+          <li><span>Ajustes</span><span>3 incluídos</span></li>
+        </ul>
+        <p class="price-addon">+ R$223: Google Meu Negócio configurado</p>
+        <a href="https://wa.me/5599981008588?text=Oi!%20Quero%20aparecer%20no%20Google" class="btn btn-ghost-dark" target="_blank" rel="noopener">Quero aparecer no Google</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="section-head">
+      <p class="section-eyebrow">PERGUNTAS FREQUENTES</p>
+      <h2>Antes de você chamar no WhatsApp</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>Vocês atendem só Balsas ou todo o Brasil?</summary>
+        <p>Os dois: atendimento presencial em Balsas e região, e remoto por videochamada e WhatsApp pra qualquer cidade do Brasil.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Qual a diferença entre a página de tráfego pago e a página pra Google?</summary>
+        <p>A de tráfego pago é feita pra converter quem já chega por anúncio — a copy é o foco. A de Google inclui pesquisa de palavra-chave e SEO técnico completo, pensada pra ser encontrada organicamente com o tempo.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quanto tempo demora pra ficar pronto?</summary>
+        <p>Em até 5 dias úteis após o diagnóstico da sua oferta ser aprovado com você.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="contato" class="cta">
+    <h2>Pronto pra ter uma página que prende em 3 segundos?</h2>
+    <p>Manda uma mensagem agora e a gente já começa pelo diagnóstico.</p>
+    <a href="https://wa.me/5599981008588?text=Oi!%20Quero%20um%20site%20com%20a%20Mireroff.Studio" class="btn btn-primary btn-large" target="_blank" rel="noopener">Falar no WhatsApp</a>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-brand">
+    <picture>
+      <source srcset="assets/logo-light.webp" type="image/webp">
+      <img src="assets/logo-light.png" alt="Mireroff.Studio" class="brand-logo footer-logo" width="480" height="200">
+    </picture>
+  </div>
+  <p>Balsas — MA · Atendimento presencial e remoto para todo o Brasil</p>
+  <p>&copy; <span id="year"></span> Mireroff.Studio. Todos os direitos reservados.</p>
+</footer>
+
+<div class="sticky-cta">
+  <a href="https://wa.me/5599981008588?text=Oi!%20Quero%20o%20diagn%C3%B3stico%20da%20minha%20p%C3%A1gina" target="_blank" rel="noopener">Falar no WhatsApp</a>
+</div>
+
+<script src="assets/font-swap.js" defer></script>
+<script src="assets/year.js" defer></script>
+</body>
+</html>
