@@ -1,10 +1,13 @@
 {
   "cleanUrls": true,
+  "redirects": [
+    { "source": "/criacao-de-paginas-de-vendas-em-balsas", "destination": "/agencia-de-marketing-balsas", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; require-trusted-types-for 'script'" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self' 'sha256-0nk/pnwcYDZ1/QFTdixfjoZ5epf1fEAHmmPABR/k3TY=' https://www.googletagmanager.com https://tagmanager.google.com; script-src-elem 'self' 'sha256-0nk/pnwcYDZ1/QFTdixfjoZ5epf1fEAHmmPABR/k3TY=' https://www.googletagmanager.com https://tagmanager.google.com; style-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://tagmanager.google.com https://fonts.googleapis.com https://www.gstatic.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://ssl.gstatic.com https://www.gstatic.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://google.com https://www.google.com; frame-src https://www.googletagmanager.com https://tagmanager.google.com; frame-ancestors 'none'; base-uri 'self'" },
         { "key": "X-Frame-Options", "value": "DENY" },
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
