@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<!-- Google Tag Manager -->
+<script src="../assets/gtm-loader.js"></script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Mireroff.Studio</title>
+<meta name="description" content="Conteúdo sobre SEO local, tráfego pago, Google Ads e presença digital para negócios em Balsas-MA e todo o Brasil, direto da equipe da Mireroff.Studio.">
+<link rel="canonical" href="https://mireroffstudio.com.br/blog">
+<link rel="icon" href="../assets/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog — Mireroff.Studio">
+<meta property="og:description" content="Conteúdo sobre SEO local, tráfego pago, Google Ads e presença digital para negócios em Balsas-MA e todo o Brasil.">
+<meta property="og:url" content="https://mireroffstudio.com.br/blog">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" data-swap href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+<style>
+:root {
+  --branco: #ffffff;
+  --azul-marinho: #0b1e3a;
+  --azul-marinho-deep: #06142a;
+  --grafite: #2e3338;
+  --grafite-suave: #4c545c;
+  --terracota: #b14f30;
+  --terracota-hover: #93401f;
+  --terracota-on-dark: #e8916d;
+  --borda: #e6e8ec;
+
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  color: var(--grafite);
+  background: var(--branco);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { text-decoration: none; color: inherit; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--terracota); outline-offset: 3px; }
+img { max-width: 100%; display: block; }
+
+.navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 22px 6%;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+}
+.brand { display: flex; align-items: center; }
+.brand-logo { height: 60px; width: auto; }
+.nav-links { display: flex; align-items: center; gap: 32px; }
+.nav-links a { font-size: 0.92rem; font-weight: 500; color: var(--grafite); opacity: 0.85; }
+.nav-links a:hover { opacity: 1; }
+.nav-cta { background: var(--terracota); color: var(--branco) !important; padding: 9px 20px; border-radius: 6px; opacity: 1 !important; }
+.nav-cta:hover { background: var(--terracota-hover); }
+
+.blog-hero {
+  padding: 150px 6% 60px;
+  background: linear-gradient(120deg, var(--azul-marinho-deep) 0%, var(--azul-marinho) 60%, #142d52 100%);
+  color: var(--branco); text-align: center;
+}
+.blog-hero p.eyebrow { color: var(--terracota-on-dark); font-size: 0.8rem; font-weight: 600; letter-spacing: 2px; margin-bottom: 14px; }
+.blog-hero h1 { font-family: var(--serif); font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 600; }
+.blog-hero p.sub { color: rgba(255,255,255,0.78); max-width: 560px; margin: 16px auto 0; }
+
+.blog-grid { max-width: 900px; margin: 0 auto; padding: 56px 6% 100px; display: grid; gap: 28px; }
+.post-card {
+  display: grid; grid-template-columns: 220px 1fr; gap: 24px;
+  border: 1px solid var(--borda); border-radius: 12px; overflow: hidden;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.post-card:hover { box-shadow: 0 16px 32px rgba(11,30,58,0.1); transform: translateY(-3px); }
+.post-card img { width: 100%; height: 100%; object-fit: cover; }
+.post-card-body { padding: 22px 22px 22px 0; display: flex; flex-direction: column; justify-content: center; }
+.post-card-body span { font-size: 0.78rem; color: var(--terracota); font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; margin-bottom: 8px; }
+.post-card-body h2 { font-family: var(--serif); font-size: 1.3rem; color: var(--azul-marinho); font-weight: 600; margin-bottom: 8px; }
+.post-card-body p { color: var(--grafite-suave); font-size: 0.92rem; }
+
+.footer { background: var(--azul-marinho-deep); color: rgba(255, 255, 255, 0.6); text-align: center; padding: 40px 6% 60px; }
+.footer-brand { margin-bottom: 14px; display: flex; justify-content: center; }
+.footer-brand .footer-logo { height: 48px; }
+.footer p { font-size: 0.85rem; margin-top: 4px; }
+.footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 16px; font-size: 0.82rem; }
+.footer-links a { color: rgba(255, 255, 255, 0.65); }
+.footer-links a:hover { color: var(--branco); }
+
+@media (max-width: 700px) {
+  .nav-links a:not(.nav-cta) { display: none; }
+  .post-card { grid-template-columns: 1fr; }
+  .post-card-body { padding: 4px 18px 20px; }
+  .post-card img { height: 180px; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://mireroffstudio.com.br/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://mireroffstudio.com.br/blog" }
+      ]
+    },
+    {
+      "@type": "Blog",
+      "name": "Blog Mireroff.Studio",
+      "url": "https://mireroffstudio.com.br/blog",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mireroff.Studio",
+        "logo": { "@type": "ImageObject", "url": "https://mireroffstudio.com.br/assets/logo.png" }
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WFGDRNSJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="navbar">
+  <a href="/" class="brand">
+    <picture>
+      <source srcset="../assets/logo.webp" type="image/webp">
+      <img src="../assets/logo.png" alt="Mireroff.Studio" class="brand-logo" width="480" height="200">
+    </picture>
+  </a>
+  <nav class="nav-links">
+    <a href="/#servicos">Serviços</a>
+    <a href="/blog">Blog</a>
+    <a href="/#investimento">Investimento</a>
+    <a href="https://wa.me/5599981008588?text=Oi!%20Quero%20falar%20com%20a%20Mireroff.Studio" class="nav-cta" target="_blank" rel="noopener" data-cta="cta_landing_page" data-location="nav">Falar agora</a>
+  </nav>
+</header>
+
+<main>
+  <section class="blog-hero">
+    <p class="eyebrow">MIREROFF.STUDIO · BLOG</p>
+    <h1>Conteúdo pra quem quer aparecer no Google</h1>
+    <p class="sub">SEO local, tráfego pago, Google Ads e presença digital — escrito pela equipe que constrói isso todo dia em Balsas e pro Brasil inteiro.</p>
+  </section>
+
+  <div class="blog-grid">
+    <a class="post-card" href="/blog/seo-local-como-aparecer-no-google">
+      <img src="../assets/blog/seo-local-em-balsas.jpg" alt="SEO local em Balsas: ilustração de um pin de localização sobre um mapa estilizado da cidade com ícone de busca do Google." width="220" height="220" loading="lazy">
+      <div class="post-card-body">
+        <span>SEO Local</span>
+        <h2>SEO Local: Como Aparecer no Google em Balsas</h2>
+        <p>O que é SEO local, como funciona na prática, quanto tempo leva pra dar resultado e os erros mais comuns de quem tenta sozinho.</p>
+      </div>
+    </a>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-brand">
+    <picture>
+      <source srcset="../assets/logo-light.webp" type="image/webp">
+      <img src="../assets/logo-light.png" alt="Mireroff.Studio" class="brand-logo footer-logo" width="480" height="200">
+    </picture>
+  </div>
+  <p>Balsas — MA · Atendimento presencial e remoto para todo o Brasil</p>
+  <div class="footer-links">
+    <a href="/agencia-de-marketing-balsas">Agência de marketing em Balsas</a>
+    <a href="/landing-page-balsas">Landing page em Balsas</a>
+    <a href="/google-ads-balsas">Google Ads em Balsas</a>
+    <a href="/trafego-pago-balsas">Tráfego pago em Balsas</a>
+    <a href="/seo-balsas">SEO em Balsas</a>
+    <a href="/criacao-de-sites-balsas">Criação de sites em Balsas</a>
+    <a href="/portfolio-profissional-balsas">Portfólio profissional em Balsas</a>
+  </div>
+  <p>&copy; <span id="year"></span> Mireroff.Studio. Todos os direitos reservados.</p>
+</footer>
+
+<script src="../assets/font-swap.js" defer></script>
+<script src="../assets/year.js" defer></script>
+</body>
+</html>
