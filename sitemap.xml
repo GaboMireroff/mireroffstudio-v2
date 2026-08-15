@@ -36,6 +36,11 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://mireroffstudio.com.br/gestao-mercado-livre</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://mireroffstudio.com.br/portfolio-profissional-balsas</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

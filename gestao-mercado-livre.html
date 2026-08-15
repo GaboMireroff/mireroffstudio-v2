@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<!-- Google Tag Manager -->
+<script src="assets/gtm-loader.js"></script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestão do Mercado Livre para Empresas | Mireroff.Studio</title>
+<meta name="description" content="Implantação e gestão de contas no Mercado Livre para empresas: cadastro de produtos, anúncios otimizados, catálogo, Mercado Ads e acompanhamento mensal.">
+<link rel="canonical" href="https://mireroffstudio.com.br/gestao-mercado-livre">
+<link rel="icon" href="assets/logo.png">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gestão do Mercado Livre para Empresas | Mireroff.Studio">
+<meta property="og:description" content="Implantação e gestão de contas no Mercado Livre para empresas: cadastro de produtos, anúncios otimizados, catálogo, Mercado Ads e acompanhamento mensal.">
+<meta property="og:url" content="https://mireroffstudio.com.br/gestao-mercado-livre">
+<meta property="og:image" content="https://mireroffstudio.com.br/assets/logo.png">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" data-swap href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+<style>
+:root {
+  --branco: #ffffff;
+  --creme: #fdf9ef;
+  --amarelo: #ffb800;
+  --amarelo-soft: #ffe29a;
+  --amarelo-hover: #e6a400;
+  --azul-escuro: #10203b;
+  --azul-escuro-deep: #0a1730;
+  --grafite: #2e3338;
+  --grafite-suave: #5a6168;
+  --borda: #ece3cd;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); color: var(--grafite); background: var(--branco); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { text-decoration: none; color: inherit; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--azul-escuro); outline-offset: 3px; }
+.hero a:focus-visible, .hero button:focus-visible,
+.cta a:focus-visible, .cta button:focus-visible { outline-color: #ffffff; }
+img { max-width: 100%; display: block; }
+.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 22px 6%; background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-bottom: 1px solid var(--borda); }
+.brand { display: flex; align-items: center; }
+.brand-logo { height: 60px; width: auto; }
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--azul-escuro); opacity: 0.85; }
+.nav-links a:hover { opacity: 1; }
+.nav-cta { background: var(--amarelo); color: var(--azul-escuro) !important; padding: 9px 20px; border-radius: 6px; font-weight: 700; opacity: 1 !important; transition: background 0.2s ease, transform 0.2s ease; }
+.nav-cta:hover { background: var(--amarelo-hover); transform: translateY(-1px); }
+
+.hero { position: relative; min-height: 90vh; display: flex; align-items: center; overflow: hidden; background: linear-gradient(120deg, var(--azul-escuro-deep) 0%, var(--azul-escuro) 45%, #16294d 75%, var(--azul-escuro-deep) 100%); }
+.hero-glow { position: absolute; border-radius: 50%; filter: blur(90px); pointer-events: none; will-change: transform; }
+.hero-glow-1 { width: 580px; height: 580px; background: radial-gradient(circle, rgba(255,184,0,0.45) 0%, rgba(255,184,0,0) 70%); top: -12%; right: -8%; animation: glowPulse 8s ease-in-out infinite; }
+.hero-glow-2 { width: 440px; height: 440px; background: radial-gradient(circle, rgba(255,184,0,0.28) 0%, rgba(255,184,0,0) 70%); bottom: -16%; left: -6%; animation: glowPulse 10s ease-in-out infinite reverse; }
+@keyframes glowPulse { 0%,100% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.35); opacity: 1; } }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(10,23,48,0.55) 0%, rgba(16,32,59,0.35) 55%, rgba(16,32,59,0.2) 100%); }
+.hero-content { position: relative; z-index: 2; max-width: 760px; padding: 96px 6% 40px; }
+.hero-eyebrow { color: var(--amarelo); font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; margin-bottom: 18px; }
+.hero-title { font-family: var(--serif); font-size: clamp(2.1rem, 4.6vw, 3.3rem); font-weight: 600; color: var(--branco); line-height: 1.18; margin-bottom: 20px; text-wrap: balance; }
+.hero-sub { font-size: 1.08rem; color: rgba(255,255,255,0.82); max-width: 580px; margin-bottom: 32px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.btn { display: inline-block; padding: 14px 26px; border-radius: 6px; font-weight: 700; font-size: 0.94rem; transition: transform 0.2s ease, background 0.2s ease; }
+.btn-primary { background: var(--amarelo); color: var(--azul-escuro); box-shadow: 0 8px 24px rgba(255,184,0,0.35); }
+.btn-primary:hover { background: var(--amarelo-hover); transform: translateY(-2px); }
+.btn-ghost { background: transparent; color: var(--branco); border: 1.5px solid rgba(255,255,255,0.4); font-weight: 600; }
+.btn-ghost:hover { border-color: var(--branco); background: rgba(255,255,255,0.08); }
+.btn-outline { background: transparent; color: var(--azul-escuro); border: 1.5px solid var(--azul-escuro); font-weight: 600; }
+.btn-outline:hover { background: var(--azul-escuro); color: var(--branco); }
+.btn-large { padding: 17px 34px; font-size: 1rem; }
+
+section { padding: 88px 6%; }
+.section-head { text-align: center; max-width: 700px; margin: 0 auto 44px; }
+.section-eyebrow { color: var(--amarelo-hover); font-size: 0.78rem; font-weight: 700; letter-spacing: 2px; margin-bottom: 12px; }
+.section-head h2 { font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--azul-escuro); font-weight: 600; text-wrap: balance; }
+.section-head p.lede { color: var(--grafite-suave); font-size: 1rem; margin-top: 12px; }
+
+.service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; max-width: 1080px; margin: 0 auto; }
+.service-card { padding: 26px; border: 1px solid var(--borda); border-radius: 12px; transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
+.service-card:hover { transform: translateY(-5px); box-shadow: 0 14px 28px rgba(16,32,59,0.1); border-color: var(--amarelo); }
+.service-card .tag { display: inline-block; width: 34px; height: 34px; line-height: 34px; text-align: center; border-radius: 8px; background: var(--amarelo-soft); color: var(--azul-escuro); font-family: var(--serif); font-weight: 700; font-style: italic; margin-bottom: 14px; }
+.service-card h3 { font-family: var(--serif); font-size: 1.06rem; color: var(--azul-escuro); margin-bottom: 8px; }
+.service-card p { color: var(--grafite-suave); font-size: 0.9rem; margin: 0; }
+
+.process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px 30px; max-width: 980px; margin: 0 auto; text-align: center; }
+.process-step .n { font-family: var(--serif); font-size: 1.5rem; color: var(--amarelo-hover); font-style: italic; }
+.process-step h3 { color: var(--azul-escuro); font-size: 1.08rem; margin: 12px 0 6px; }
+.process-step p { color: var(--grafite-suave); font-size: 0.92rem; }
+
+.audience-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 900px; margin: 32px auto 0; }
+.audience-card { padding: 28px; border-radius: 12px; background: var(--creme); border: 1px solid var(--borda); }
+.audience-card h3 { font-family: var(--serif); color: var(--azul-escuro); font-size: 1.08rem; margin-bottom: 8px; }
+.audience-card p { color: var(--grafite-suave); font-size: 0.94rem; }
+
+.diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 980px; margin: 0 auto; }
+.diff-card { padding: 26px 24px; border-radius: 12px; border: 1px solid var(--borda); }
+.diff-card h3 { color: var(--azul-escuro); font-family: var(--serif); font-size: 1.02rem; margin-bottom: 8px; }
+.diff-card h3::before { content: "—"; color: var(--amarelo-hover); margin-right: 8px; }
+.diff-card p { color: var(--grafite-suave); font-size: 0.9rem; }
+
+.faq-list { max-width: 740px; margin: 0 auto; }
+.faq-item { border-top: 1px solid var(--borda); padding: 18px 0; }
+.faq-item:first-child { border-top: none; }
+.faq-item summary { font-weight: 600; color: var(--azul-escuro); cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; color: var(--amarelo-hover); flex: none; font-weight: 700; }
+.faq-item[open] summary::after { content: "–"; }
+.faq-item p { margin-top: 10px; color: var(--grafite-suave); font-size: 0.94rem; }
+
+.cta { position: relative; overflow: hidden; background: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul-escuro-deep) 100%); text-align: center; padding: 100px 6%; }
+.cta .hero-glow-1, .cta .hero-glow-2 { opacity: 0.7; }
+.cta-content { position: relative; z-index: 2; }
+.cta h2 { font-family: var(--serif); color: var(--branco); font-size: clamp(1.6rem, 3.2vw, 2.3rem); margin-bottom: 14px; font-weight: 600; text-wrap: balance; }
+.cta p { color: rgba(255,255,255,0.78); margin-bottom: 28px; font-size: 1rem; }
+
+.disclaimer { max-width: 760px; margin: 0 auto; text-align: center; color: var(--grafite-suave); font-size: 0.82rem; padding: 0 6% 48px; }
+
+.footer { background: var(--azul-escuro-deep); color: rgba(255,255,255,0.6); text-align: center; padding: 36px 6% 100px; }
+.footer-brand { margin-bottom: 12px; display: flex; justify-content: center; }
+.footer-brand .footer-logo { height: 44px; }
+.footer p { font-size: 0.82rem; margin-top: 4px; }
+.footer-note { font-size: 0.76rem; max-width: 620px; margin: 14px auto 0; color: rgba(255,255,255,0.42); }
+.footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; margin-top: 14px; font-size: 0.8rem; }
+.footer-links a { color: rgba(255,255,255,0.65); }
+.footer-links a:hover { color: var(--amarelo); }
+.footer-credit a { color: var(--amarelo); font-weight: 600; }
+
+.sticky-cta { display: none; }
+
+@media (max-width: 860px) {
+  .nav-links { gap: 16px; } .nav-links a:not(.nav-cta) { display: none; }
+  .service-grid { grid-template-columns: repeat(2, 1fr); max-width: 480px; }
+  .process-grid { grid-template-columns: 1fr; max-width: 420px; }
+  .audience-grid, .diff-grid { grid-template-columns: 1fr; max-width: 420px; }
+  section { padding: 64px 6%; }
+  .sticky-cta { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: var(--branco); border-top: 1px solid var(--borda); padding: 12px 16px; box-shadow: 0 -4px 16px rgba(16,32,59,0.1); }
+  .sticky-cta a { width: 100%; text-align: center; background: var(--amarelo); color: var(--azul-escuro); font-weight: 700; padding: 13px; border-radius: 6px; }
+  .footer { padding-bottom: 96px; }
+}
+@media (max-width: 520px) {
+  .service-grid { grid-template-columns: 1fr; max-width: 340px; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "serviceType": "Gestão de conta e catálogo no Mercado Livre",
+      "name": "Gestão do Mercado Livre para Empresas",
+      "provider": { "@type": "LocalBusiness", "name": "Mireroff.Studio", "address": { "@type": "PostalAddress", "addressLocality": "Balsas", "addressRegion": "MA", "addressCountry": "BR" } },
+      "areaServed": "Brasil",
+      "url": "https://mireroffstudio.com.br/gestao-mercado-livre",
+      "description": "Implantação e gestão de contas no Mercado Livre para empresas: cadastro de produtos, otimização de anúncios, catálogo, precificação e Mercado Ads."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Mireroff.Studio", "item": "https://mireroffstudio.com.br/" },
+        { "@type": "ListItem", "position": 2, "name": "Gestão do Mercado Livre para Empresas", "item": "https://mireroffstudio.com.br/gestao-mercado-livre" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Quanto tempo leva para minha conta começar a vender?", "acceptedAnswer": { "@type": "Answer", "text": "Depende do tamanho do catálogo e da documentação da empresa. Depois do diagnóstico inicial, você recebe um prazo estimado para a conta estar estruturada e os primeiros anúncios no ar." } },
+        { "@type": "Question", "name": "Preciso ter muitos produtos para começar?", "acceptedAnswer": { "@type": "Answer", "text": "Não. A estrutura se adapta ao tamanho do seu catálogo — funciona tanto para quem está começando com poucos produtos quanto para quem já tem um catálogo grande para organizar." } },
+        { "@type": "Question", "name": "Quais taxas o Mercado Livre cobra?", "acceptedAnswer": { "@type": "Answer", "text": "O Mercado Livre cobra comissão por venda, que varia conforme a categoria do produto e o tipo de anúncio, além de custos de frete e parcelamento repassados pela plataforma. Na precificação, calculamos sua margem já considerando essas taxas — os valores exatos variam por categoria e são consultados diretamente na plataforma." } },
+        { "@type": "Question", "name": "Vocês cuidam do envio dos produtos?", "acceptedAnswer": { "@type": "Answer", "text": "A operação logística de embalar e enviar continua sendo da sua empresa ou do parceiro logístico escolhido. Nós orientamos sobre as modalidades de envio do Mercado Livre e como configurá-las na conta." } },
+        { "@type": "Question", "name": "Vocês emitem a nota fiscal das vendas?", "acceptedAnswer": { "@type": "Answer", "text": "Não. A emissão de NF-e é responsabilidade do seu setor fiscal ou contábil. Orientamos sobre como esse fluxo se integra à operação do Mercado Livre, para a conta funcionar corretamente." } },
+        { "@type": "Question", "name": "O que está incluso na gestão mensal?", "acceptedAnswer": { "@type": "Answer", "text": "Acompanhamento de métricas da conta, otimização de anúncios, ajustes de catálogo e precificação, e orientação contínua sobre a operação — o escopo exato é definido no diagnóstico, conforme o tamanho da sua operação." } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WFGDRNSJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="navbar">
+  <a href="/" class="brand"><picture><source srcset="assets/logo.webp" type="image/webp"><img src="assets/logo.png" alt="Mireroff.Studio" class="brand-logo" width="480" height="200"></picture></a>
+  <nav class="nav-links">
+    <a href="/">Início</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#faq">Perguntas</a>
+    <a href="https://wa.me/5599981008588?text=Oi!%20Quero%20vender%20no%20Mercado%20Livre" class="nav-cta" target="_blank" rel="noopener" data-cta="cta_mercado_livre" data-location="nav">Falar agora</a>
+  </nav>
+</header>
+
+<main>
+  <section id="hero" class="hero">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">MIREROFF.STUDIO · GESTÃO DE MARKETPLACE</p>
+      <h1 class="hero-title">Transforme o Mercado Livre em um novo canal de vendas para sua empresa</h1>
+      <p class="hero-sub">A Mireroff Studio estrutura sua operação desde o cadastro dos produtos até a otimização dos anúncios, organização do catálogo e crescimento da conta.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/5599981008588?text=Oi!%20Quero%20vender%20no%20Mercado%20Livre" class="btn btn-primary btn-large" target="_blank" rel="noopener" data-cta="cta_mercado_livre" data-location="hero">Quero vender no Mercado Livre</a>
+        <a href="#servicos" class="btn btn-ghost">Ver o que fazemos</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <div class="section-head">
+      <p class="section-eyebrow">O QUE FAZEMOS</p>
+      <h2>Gestão completa da sua operação no Mercado Livre</h2>
+      <p class="lede">Da implantação da conta ao acompanhamento mensal, cada etapa é estruturada para transformar catálogo em pedido.</p>
+    </div>
+    <div class="service-grid">
+      <article class="service-card"><span class="tag">01</span><h3>Implantação da conta</h3><p>Configuração completa da conta empresarial, do zero ou reorganizando uma conta que já existe.</p></article>
+      <article class="service-card"><span class="tag">02</span><h3>Cadastro de produtos</h3><p>Anúncios com título, descrição, imagens e ficha técnica organizados para o algoritmo do Mercado Livre entender seu produto.</p></article>
+      <article class="service-card"><span class="tag">03</span><h3>Otimização de anúncios</h3><p>Ajuste de título, atributos e imagens dos anúncios já publicados para melhorar posicionamento e conversão.</p></article>
+      <article class="service-card"><span class="tag">04</span><h3>Catálogo e SKU</h3><p>Estrutura de SKU e variações organizada para catálogos pequenos ou grandes, sem produto duplicado ou anúncio confuso.</p></article>
+      <article class="service-card"><span class="tag">05</span><h3>Precificação e margem</h3><p>Preço calculado considerando comissão, frete e parcelamento — pra vender sem corroer sua margem.</p></article>
+      <article class="service-card"><span class="tag">06</span><h3>Logística e NF-e</h3><p>Orientação sobre modalidades de envio e sobre como esse fluxo se integra à emissão fiscal da sua empresa.</p></article>
+      <article class="service-card"><span class="tag">07</span><h3>Mercado Ads</h3><p>Campanhas de mídia paga dentro do próprio Mercado Livre para dar mais visibilidade aos anúncios certos.</p></article>
+      <article class="service-card"><span class="tag">08</span><h3>Gestão e acompanhamento</h3><p>Acompanhamento mensal de métricas, reputação da conta e ajustes contínuos na operação.</p></article>
+    </div>
+  </section>
+
+  <section id="como-funciona" style="background:var(--creme);">
+    <div class="section-head">
+      <p class="section-eyebrow">COMO FUNCIONA</p>
+      <h2>Do diagnóstico à escala da operação</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-step"><span class="n">01</span><h3>Análise</h3><p>Diagnóstico da empresa, do catálogo e da categoria antes de qualquer publicação.</p></div>
+      <div class="process-step"><span class="n">02</span><h3>Estruturação</h3><p>Conta, catálogo, SKU e precificação organizados com uma estrutura que aguenta crescer.</p></div>
+      <div class="process-step"><span class="n">03</span><h3>Publicação</h3><p>Anúncios no ar, com título, imagens e atributos preparados para o algoritmo do Mercado Livre.</p></div>
+      <div class="process-step"><span class="n">04</span><h3>Operação</h3><p>Conta funcionando no dia a dia — pedidos, reputação e catálogo sob acompanhamento.</p></div>
+      <div class="process-step"><span class="n">05</span><h3>Otimização</h3><p>Ajustes de anúncio, preço e Mercado Ads a partir do que os dados da conta mostram.</p></div>
+      <div class="process-step"><span class="n">06</span><h3>Escala</h3><p>Estrutura pronta pra aumentar catálogo, investimento em mídia e faturamento da operação.</p></div>
+    </div>
+  </section>
+
+  <section id="para-quem">
+    <div class="section-head">
+      <p class="section-eyebrow">PARA QUEM É</p>
+      <h2>Empresas que querem vender — ou vender melhor — no Mercado Livre</h2>
+      <p class="lede">Atendemos tanto quem nunca vendeu no marketplace quanto quem já tem uma operação rodando e sente que falta estrutura.</p>
+    </div>
+    <div class="audience-grid">
+      <div class="audience-card"><h3>Quer começar do zero</h3><p>Sua empresa quer abrir uma conta e não sabe por onde estruturar catálogo, anúncio e precificação.</p></div>
+      <div class="audience-card"><h3>Já vende, mas de forma desorganizada</h3><p>A conta existe, mas o catálogo está confuso, os anúncios não performam e falta acompanhamento contínuo.</p></div>
+    </div>
+  </section>
+
+  <section id="diferenciais" style="background:var(--creme);">
+    <div class="section-head">
+      <p class="section-eyebrow">DIFERENCIAIS</p>
+      <h2>Por que estruturar essa operação com a Mireroff Studio</h2>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-card"><h3>Estrutura profissional</h3><p>Conta organizada com processo, não montada no improviso.</p></div>
+      <div class="diff-card"><h3>Processo organizado</h3><p>Cada etapa documentada, sem depender de tentativa e erro.</p></div>
+      <div class="diff-card"><h3>Anúncios otimizados</h3><p>Título, atributos e imagem pensados pra reputação e posicionamento do anúncio.</p></div>
+      <div class="diff-card"><h3>Estratégia orientada a vendas</h3><p>Cada decisão de catálogo, preço e anúncio pensada pra gerar pedido, não só pra "estar no ar".</p></div>
+      <div class="diff-card"><h3>Suporte na implantação</h3><p>Acompanhamento durante toda a estruturação inicial da conta.</p></div>
+      <div class="diff-card"><h3>Crescimento baseado em dados</h3><p>Otimização contínua a partir do desempenho real da conta, não achismo.</p></div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="section-head">
+      <p class="section-eyebrow">PERGUNTAS FREQUENTES</p>
+      <h2>Antes de você chamar no WhatsApp</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open><summary>Quanto tempo leva para minha conta começar a vender?</summary><p>Depende do tamanho do catálogo e da documentação da empresa. Depois do diagnóstico inicial, você recebe um prazo estimado para a conta estar estruturada e os primeiros anúncios no ar.</p></details>
+      <details class="faq-item"><summary>Preciso ter muitos produtos para começar?</summary><p>Não. A estrutura se adapta ao tamanho do seu catálogo — funciona tanto para quem está começando com poucos produtos quanto para quem já tem um catálogo grande para organizar.</p></details>
+      <details class="faq-item"><summary>Quais taxas o Mercado Livre cobra?</summary><p>O Mercado Livre cobra comissão por venda, que varia conforme a categoria do produto e o tipo de anúncio, além de custos de frete e parcelamento repassados pela plataforma. Na precificação, calculamos sua margem já considerando essas taxas — os valores exatos variam por categoria e são consultados diretamente na plataforma.</p></details>
+      <details class="faq-item"><summary>Vocês cuidam do envio dos produtos?</summary><p>A operação logística de embalar e enviar continua sendo da sua empresa ou do parceiro logístico escolhido. Nós orientamos sobre as modalidades de envio do Mercado Livre e como configurá-las na conta.</p></details>
+      <details class="faq-item"><summary>Vocês emitem a nota fiscal das vendas?</summary><p>Não. A emissão de NF-e é responsabilidade do seu setor fiscal ou contábil. Orientamos sobre como esse fluxo se integra à operação do Mercado Livre, para a conta funcionar corretamente.</p></details>
+      <details class="faq-item"><summary>O que está incluso na gestão mensal?</summary><p>Acompanhamento de métricas da conta, otimização de anúncios, ajustes de catálogo e precificação, e orientação contínua sobre a operação — o escopo exato é definido no diagnóstico, conforme o tamanho da sua operação.</p></details>
+    </div>
+  </section>
+
+  <section id="contato" class="cta">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="cta-content">
+      <h2>Pronto para colocar sua empresa no Mercado Livre?</h2>
+      <p>Fale agora e a gente começa pelo diagnóstico da sua operação.</p>
+      <a href="https://wa.me/5599981008588?text=Oi!%20Quero%20vender%20no%20Mercado%20Livre" class="btn btn-primary btn-large" target="_blank" rel="noopener" data-cta="cta_mercado_livre" data-location="cta_final">Falar com a Mireroff Studio</a>
+    </div>
+  </section>
+
+  <p class="disclaimer">A Mireroff Studio presta serviço de gestão de operações em marketplaces e não garante resultado de vendas — o desempenho depende de fatores como categoria, concorrência, preço e demanda de mercado.</p>
+</main>
+
+<footer class="footer">
+  <div class="footer-brand"><picture><source srcset="assets/logo-light.webp" type="image/webp"><img src="assets/logo-light.png" alt="Mireroff.Studio" class="brand-logo footer-logo" width="480" height="200" loading="lazy" decoding="async"></picture></div>
+  <p>Balsas — MA · Atendimento remoto para empresas de todo o Brasil</p>
+  <div class="footer-links">
+    <a href="/">Página inicial</a>
+    <a href="/blog">Blog</a>
+    <a href="/agencia-de-marketing-balsas">Agência de marketing em Balsas</a>
+    <a href="/trafego-pago-balsas">Tráfego pago em Balsas</a>
+    <a href="/seo-balsas">SEO em Balsas</a>
+  </div>
+  <p class="footer-credit">Desenvolvido por <a href="https://mireroffstudio.com.br" target="_blank" rel="noopener noreferrer">mireroff.studio</a></p>
+  <p>&copy; <span id="year"></span> Mireroff.Studio. Todos os direitos reservados.</p>
+  <p class="footer-note">A Mireroff Studio é uma agência independente de gestão de operações em marketplaces. Não somos afiliados, representantes oficiais nem parceiros certificados do Mercado Livre — a marca é citada apenas para descrever o serviço prestado.</p>
+</footer>
+
+<div class="sticky-cta"><a href="https://wa.me/5599981008588?text=Oi!%20Quero%20vender%20no%20Mercado%20Livre" target="_blank" rel="noopener" data-cta="cta_mercado_livre" data-location="sticky">Falar no WhatsApp</a></div>
+
+<script src="assets/font-swap.js" defer></script>
+<script src="assets/year.js" defer></script>
+<script src="assets/whatsapp-conversion.js" defer></script>
+</body>
+</html>
