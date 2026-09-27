@@ -6,6 +6,69 @@
     window.dataLayer.push(data);
   }
 
+  // Mini CRM (Supabase) -- chave publicável/anon, segura de expor no frontend:
+  // a tabela "leads" só aceita INSERT para essa chave (RLS), nunca leitura.
+  var SUPABASE_URL = 'https://pytuifwlcwswigzdrnsn.supabase.co';
+  var SUPABASE_ANON_KEY = 'sb_publishable_a87W2-94MAnQTw_DcQsJog_Bar0mkLX';
+  var supabaseClient = (window.supabase && window.supabase.createClient)
+    ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+    : null;
+
+  function getUTMs() {
+    var params = new URLSearchParams(window.location.search);
+    return {
+      utm_source: params.get('utm_source'),
+      utm_medium: params.get('utm_medium'),
+      utm_campaign: params.get('utm_campaign'),
+      utm_content: params.get('utm_content'),
+      utm_term: params.get('utm_term')
+    };
+  }
+
+  function mapBoolean(value, trueValue, falseValue) {
+    if (value === trueValue) return true;
+    if (value === falseValue) return false;
+    return null;
+  }
+
+  // "acesso_dados" e uma unica pergunta combinada (Sim/Parcialmente/Nao) na
+  // landing, mas o schema do CRM guarda custo/estoque/vendas separados --
+  // aplica a mesma resposta aos tres; "Parcialmente" fica null (nao concede
+  // pontuacao cheia nem nega, o trigger de score exige as tres = true).
+  function saveLead(fields) {
+    if (!supabaseClient) return;
+    var utms = getUTMs();
+    var acessoBool = mapBoolean(fields.acesso_dados, 'Sim', 'Não');
+
+    supabaseClient.from('leads').insert({
+      nome: fields.nome,
+      empresa: fields.empresa,
+      whatsapp: fields.whatsapp,
+      email: fields.email || null,
+      cidade: fields.cidade,
+      segmento: fields.segmento,
+      faturamento_mensal: fields.faturamento,
+      investimento_ads: fields.investimento,
+      possui_erp: mapBoolean(fields.erp, 'Sim', 'Não'),
+      acessa_custo: acessoBool,
+      acessa_estoque: acessoBool,
+      acessa_vendas: acessoBool,
+      principal_problema: fields.problema,
+      objetivo_90_dias: fields.objetivo || null,
+      utm_source: utms.utm_source,
+      utm_medium: utms.utm_medium,
+      utm_campaign: utms.utm_campaign,
+      utm_content: utms.utm_content,
+      utm_term: utms.utm_term,
+      landing_page: window.location.pathname,
+      referrer: document.referrer || null
+    }).then(function (res) {
+      if (res.error) console.error('Falha ao salvar lead no CRM:', res.error);
+    });
+    // Falha aqui nao trava o fluxo do usuario -- o WhatsApp continua
+    // funcionando como canal de contato mesmo se o CRM falhar.
+  }
+
   function firstInvalid(list) {
     for (var i = 0; i < list.length; i++) {
       if (!list[i].checkValidity()) return list[i];
@@ -123,10 +186,14 @@
 
       var nome = get('nome');
       var empresa = get('empresa');
+      var whatsapp = get('whatsapp');
+      var email = get('email');
       var segmento = get('segmento');
       var cidade = get('cidade');
       var faturamento = get('faturamento');
       var investimento = get('investimento');
+      var erp = get('erp');
+      var acessoDados = get('acesso_dados');
       var problema = get('problema');
       var objetivo = get('objetivo');
 
@@ -136,6 +203,21 @@
         lead_cidade: cidade,
         lead_faturamento: faturamento,
         lead_problema: problema
+      });
+
+      saveLead({
+        nome: nome,
+        empresa: empresa,
+        whatsapp: whatsapp,
+        email: email,
+        segmento: segmento,
+        cidade: cidade,
+        faturamento: faturamento,
+        investimento: investimento,
+        erp: erp,
+        acesso_dados: acessoDados,
+        problema: problema,
+        objetivo: objetivo
       });
 
       var msg = 'Oi! Sou ' + nome + ', da ' + empresa + ' (' + segmento + ', ' + cidade + '). ' +
